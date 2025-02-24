@@ -54,7 +54,7 @@ services:
       - back-tier
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql  # Ajout du schéma SQL
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
 
   result:
     build: ./result
@@ -72,11 +72,11 @@ services:
       - db
     networks:
       - poll-tier
-      - back-tier  # Ajout pour la connexion à la BDD
+      - back-tier
 
 networks:
   poll-tier:
   back-tier:
 
 volumes:
-  db-data:  # Ajout du volume pour la persistance des données
+  db-data:
