@@ -17,7 +17,6 @@ services:
       - db
     networks:
       - poll-tier
-      - back-tier
 
   redis:
     image: redis:7
@@ -51,6 +50,7 @@ services:
     ports:
       - "5432:5432"
     networks:
+      - result-tier
       - back-tier
     volumes:
       - db-data:/var/lib/postgresql/data
@@ -71,11 +71,12 @@ services:
       - redis
       - db
     networks:
-      - poll-tier
       - back-tier
+      - result-tier
 
 networks:
   poll-tier:
+  result-tier:
   back-tier:
 
 volumes:
