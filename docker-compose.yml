@@ -17,6 +17,7 @@ services:
       - db
     networks:
       - poll-tier
+    restart: on-failure
 
   redis:
     image: redis:7
@@ -25,6 +26,7 @@ services:
     networks:
       - poll-tier
       - back-tier
+    restart: on-failure
 
   worker:
     build: ./worker
@@ -40,6 +42,7 @@ services:
       - db
     networks:
       - back-tier
+    restart: on-failure
 
   db:
     image: postgres:16
@@ -55,6 +58,7 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
       - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    restart: on-failure
 
   result:
     build: ./result
@@ -73,6 +77,7 @@ services:
     networks:
       - back-tier
       - result-tier
+    restart: on-failure
 
 networks:
   poll-tier:
