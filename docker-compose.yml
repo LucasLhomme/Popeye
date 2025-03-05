@@ -14,7 +14,6 @@ services:
       POSTGRES_PASSWORD: password
     depends_on:
       - redis
-      - db
     networks:
       - poll-tier
     restart: on-failure
@@ -75,7 +74,6 @@ services:
       - redis
       - db
     networks:
-      - back-tier
       - result-tier
     restart: on-failure
 
