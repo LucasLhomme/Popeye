@@ -71,7 +71,6 @@ services:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
     depends_on:
-      - redis
       - db
     networks:
       - result-tier
