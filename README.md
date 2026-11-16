@@ -3,6 +3,7 @@
 [![Technology: Docker](https://img.shields.io/badge/Technology-Docker%20%26%20Swarm-2496ED.svg)](https://www.docker.com/)
 [![Module: B-DOP-200](https://img.shields.io/badge/Epitech-B--DOP--200-blue.svg)](https://www.epitech.eu/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Academic Year: 2024-2025](https://img.shields.io/badge/Academic%20Year-2024--2025%20(Tek1)-blueviolet.svg)](#)
 
 > **Popeye is an orchestration project containerizing a distributed voting application**, leveraging Docker Compose and Docker Swarm for service isolation, state persistence, and inter-container networking.
 
